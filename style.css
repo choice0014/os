@@ -1,6 +1,10 @@
 .btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    border: none;
+    border-radius: 30px;
+    font-size: 100px;
+    background-color: #fff165;
+    transition: 0.4s;
+}
+.btn:hover {
+    transform: scale(1.1);
 }
