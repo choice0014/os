@@ -14,3 +14,62 @@ body {
     object-fit: cover;
     z-index: -1;
 }
+
+.taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(16px) saturate(180%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 12px rgba(0,0,0,0.08);
+    z-index: 10;
+    padding: 0 24px;
+}
+
+.taskbar-left, .taskbar-center, .taskbar-right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.taskbar-center {
+    flex: 1;
+    justify-content: center;
+    gap: 12px;
+}
+
+.start-btn, .taskbar-icon {
+    background: rgba(255,255,255,0.7);
+    border: none;
+    border-radius: 12px;
+    padding: 6px 10px;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.start-btn:hover, .taskbar-icon:hover {
+    background: rgba(200,200,200,0.7);
+}
+
+.taskbar-right {
+    gap: 14px;
+    min-width: 160px;
+    justify-content: flex-end;
+}
+
+.taskbar-clock {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 15px;
+    color: #222;
+    margin-right: 8px;
+}
