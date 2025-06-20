@@ -1,0 +1,25 @@
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    
+    border: none;
+    border-radius: 30px;
+    font-size: 100px;
+    background-color: #fff165;
+    padding: 20px 40px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.visitOS {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+}
