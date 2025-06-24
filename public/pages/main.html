@@ -1,49 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OS</title>
-    <link rel="stylesheet" href="../css/main.css">
-    <script src="../js/os.js"></script>
-    <script src="../js/main.js" defer></script>
-</head>
-<body>
+    <link rel="stylesheet" href="../../public/css/main.css" />
+    <script src="../../public/js/main.js"></script>
+    <script src="../../public/js/os.js" defer></script>
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+  </head>
+  <body>
     <div class="wallpaper">
-        <img class="wallpaper" src="../src/wallpaper.jpg">
+      <img class="wallpaper" src="../src/wallpaper.jpg" />
     </div>
 
     <div class="taskbar">
-        <div class="taskbar-left">
-            <button class="start-btn" data-app="start">
-                <img src="../src/start.png" alt="Start" height="28">
-            </button>
-        </div>
-        <div class="taskbar-center">
-            <button class="taskbar-icon" data-app="explorer">
-                <img src="../src/explorer.png" alt="Explorer" height="24">
-            </button>
-            <button class="taskbar-icon" data-app="edge">
-                <img src="../src/edge.jpg" alt="Edge" height="24">
-            </button>
-            <button class="taskbar-icon" data-app="store">
-                <img src="../src/store.jpg" alt="Store" height="24">
-            </button>
-        </div>
-        <div class="taskbar-right">
-            <span class="taskbar-clock">12:34</span>
-            <img src="../src/network.png" alt="Network" height="18">
-            <img src="../src/volume.jpg" alt="Volume" height="18">
-        </div>
+      <div class="taskbar-left">
+        <button class="start-btn" data-app="start">
+          <img src="../src/start.png" alt="Start" height="28" />
+        </button>
+      </div>
+      <div class="taskbar-center">
+        <button class="taskbar-icon" data-app="explorer">
+          <img src="../src/explorer.png" alt="Explorer" height="24" />
+        </button>
+        <button class="taskbar-icon" data-app="edge">
+          <img src="../src/edge.jpg" alt="Edge" height="24" />
+        </button>
+        <button class="taskbar-icon" data-app="store">
+          <img src="../src/store.jpg" alt="Store" height="24" />
+        </button>
+      </div>
+      <div class="taskbar-right">
+        <span class="taskbar-clock">12:34</span>
+        <img src="../src/network.png" alt="Network" height="18" />
+        <img src="../src/volume.jpg" alt="Volume" height="18" />
+      </div>
     </div>
 
     <!-- 컨텍스트 메뉴 -->
     <div class="context-menu" id="contextMenu">
-        <div class="context-menu-item" data-action="open">열기</div>
-        <div class="context-menu-item" data-action="pin">작업 표시줄에 고정</div>
-        <div class="context-menu-item" data-action="unpin">작업 표시줄에서 고정 해제</div>
-        <div class="context-menu-separator"></div>
-        <div class="context-menu-item" data-action="properties">속성</div>
+      <div class="context-menu-item" data-action="open">열기</div>
+      <div class="context-menu-item" data-action="pin">작업 표시줄에 고정</div>
+      <div class="context-menu-item" data-action="unpin">
+        작업 표시줄에서 고정 해제
+      </div>
+      <div class="context-menu-separator"></div>
+      <div class="context-menu-item" data-action="properties">속성</div>
     </div>
-</body>
+  </body>
 </html>
