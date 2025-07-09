@@ -1,3 +1,62 @@
+/* Start Menu Overlay: 좌측 하단 고정 */
+.start-menu-overlay {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 56px;
+  width: 420px;
+  height: 520px;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  z-index: 2000;
+}
+.start-menu-overlay[style*="display: flex"] {
+  display: flex !important;
+}
+.start-menu-img {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  position: relative;
+  z-index: 1;
+}
+.power-btn {
+  position: absolute;
+  right: 48px;
+  bottom: 80px;
+  width: 48px;
+  height: 48px;
+  background: url('../src/power.png') no-repeat center/contain, rgba(255,255,255,0.0);
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Shutdown Overlay: start-menu 위에 오버레이로 */
+.shutdown-overlay {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+.shutdown-img {
+  width: 90%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+/* taskbar-icon 내부 이미지 중앙 정렬 */
+.taskbar-icon img {
+  display: block;
+  margin: auto;
+}
 body {
   margin: 0;
   padding: 0;

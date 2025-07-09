@@ -4,39 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OS</title>
-    <link rel="stylesheet" href="/css/main.css" />
-    <script src="/js/main.js"></script>
-    <script src="/js/os.js" defer></script>
+    <link rel="stylesheet" href="../css/main.css" />
+    <script src="../js/main.js"></script>
+    <script src="../js/os.js" defer></script>
     <meta http-equiv="Expires" content="-1" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Cache-Control" content="no-cache" />
+    <script type="text/javascript">
+    document.oncontextmenu = function(){return false;}
+    </script>
   </head>
-  <body>
-    <div class="wallpaper">
-      <img class="wallpaper" src="/src/wallpaper.jpg" />
+  <body onselectstart="return false" ondragstart="return false">
+    <div class="wallpaper"> 
+      <img class="wallpaper" src="../src/wallpaper.jpg" />
     </div>
 
     <div class="taskbar">
       <div class="taskbar-left">
-        <button class="start-btn" data-app="start">
-          <img src="/src/start.png" alt="Start" height="28" />
-        </button>
+        <!-- (비워둠, 필요시 다른 버튼 추가) -->
       </div>
       <div class="taskbar-center">
+        <button class="start-btn" data-a  pp="start">
+          <img src="../src/start.png" alt="Start" height="28" />
+        </button> 
         <button class="taskbar-icon" data-app="explorer">
-          <img src="/src/explorer.png" alt="Explorer" height="24" />
+          <img src="../src/explorer.png" alt="Explorer" height="24" />
         </button>
         <button class="taskbar-icon" data-app="edge">
-          <img src="/src/edge.jpg" alt="Edge" height="24" />
+          <img src="../src/edge.jpg" alt="Edge" height="24" />
         </button>
         <button class="taskbar-icon" data-app="store">
-          <img src="/src/store.jpg" alt="Store" height="24" />
+          <img src="../src/store.jpg" alt="Store" height="24" />
         </button>
       </div>
       <div class="taskbar-right">
         <span class="taskbar-clock">12:34</span>
-        <img src="/src/network.png" alt="Network" height="18" />
-        <img src="/src/volume.jpg" alt="Volume" height="18" />
+        <img src="../src/network.png" alt="Network" height="18" />
+        <img src="../src/volume.jpg" alt="Volume" height="18" />
+      </div>
+    </div>
+
+    <!-- Start Menu Overlay (좌측 하단 고정) -->
+    <div id="startMenuOverlay" class="start-menu-overlay" style="display:none;">
+      <div class="start-menu-img-wrapper" style="position:relative; width:100%; height:100%;">
+        <img src="../src/start-menu.png" alt="Start Menu" class="start-menu-img" />
+        <!-- 실제 전원 버튼 위치에 맞춰 배치 -->
+        <div class="power-btn-area" style="position:absolute; right:38px; bottom:38px; width:48px; height:48px;">
+          <button id="powerBtn" class="power-btn"></button>
+        </div>
+        <!-- Shutdown Overlay: start-menu 위에 오버레이로 표시 -->
+        <div id="shutdownOverlay" class="shutdown-overlay" style="display:none;">
+          <img src="../src/shutdown.png" alt="Shutdown" class="shutdown-img" />
+        </div>
       </div>
     </div>
 
